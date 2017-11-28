@@ -12,8 +12,8 @@
     ],
     "require": {
         "php": "^5.6.4 || ^7.0",
-        "illuminate/contracts": "5.3.* || 5.4.*",
-        "illuminate/support": "5.3.* || 5.4.*",
+        "illuminate/contracts": "5.4.* || 5.5.*",
+        "illuminate/support": "5.4.* || 5.5.*",
         "graham-campbell/manager": "^2.5",
         "pusher/pusher-php-server": "^2.6"
     },
@@ -38,6 +38,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "2.5-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Vinkla\\Pusher\\PusherServiceProvider"
+            ],
+            "aliases": {
+                "Pusher": "Vinkla\\Pusher\\Facades\\Pusher"
+            }
         }
     },
     "minimum-stability": "dev",
